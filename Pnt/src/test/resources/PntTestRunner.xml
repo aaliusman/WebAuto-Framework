@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Pnt Automation Script" parallel="false">
+
+    <!--<parameter name="useCloudEnv" value="false"/>-->
+    <!--<parameter name="cloudEnvName" value="browserstack"/>-->
+    <parameter name="os" value="OS X"/>
+    <parameter name="os_version" value="Sierra"/>
+    <!--<parameter name="browserName" value="firefox"/>-->
+    <!--<parameter name="browserVersion" value="53.0"/>-->
+    <!--<parameter name="os" value="Windows"/>-->
+    <!--<parameter name="os_version" value="Sierra"/>-->
+    <parameter name="browserName" value="chrome"/>
+    <!--<parameter name="browserVersion" value="53.0"/>-->
+    <!--<parameter name="filepath" value="/Users/bravo1516/Web-Automation-Framework/TeamSeven/Statefarm/src/test/resources/locator.properties"/>-->
+    <!--<parameter name="winchromedriverpath"-->
+    <!--value="E:\WebAutomationTeamSeven\Generic\driver\chromedriver.exe"/>-->
+    <!--<parameter name="oxchromedriverpath" value=""/>-->
+    <!--<parameter name="winfirefoxdriverpath" value="E:\WebAutomationTeamSeven\Generic\driver\geckodriver.exe"/>-->
+    <!--<parameter name="oxfirefoxdriverpath" value=""/>-->
+    <!--<parameter name="iedriverpath" value="E:\WebAutomationTeamSeven\Generic\driver\IEDriverServer.exe"/>-->
+
+    <parameter name="url" value="https://www.piit.us/"/>
+
+    <test name="PNT Forum">
+        <classes>
+
+            <!--<class name="pntForum.TestAuthentication"/>-->
+            <!--<class name="testSearchItem.TestSearhField"/>-->
+            <class name="pntForum.TestKeyword"/>
+        </classes>
+    </test>
+</suite>
