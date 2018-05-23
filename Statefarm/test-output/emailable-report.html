@@ -9,12 +9,14 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Statefarm Automation Script</th></tr>
-<tr><td><a href="#t0">Statefarm Home</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">78,757</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Statefarm Home</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">26,225</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Statefarm Automation Script</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Statefarm Home &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">database.page.TestSqlDataPage</td><td><a href="#m0">testDataBase</a></td><td rowspan="1">1527038648512</td><td rowspan="1">10754</td></tr><tr class="passedodd"><td rowspan="1">excelReader.TestEnterZip</td><td><a href="#m1">findQoutebyExcel</a></td><td rowspan="1">1527038589536</td><td rowspan="1">24856</td></tr><tr class="passedeven"><td rowspan="1">keyword.TestFeatures</td><td><a href="#m2">testKeyword</a></td><td rowspan="1">1527038621762</td><td rowspan="1">19917</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Statefarm Automation Script</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Statefarm Home &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">database.page.TestSqlDataPage</td><td><a href="#m0">testDataBase</a></td><td rowspan="1">1527107718948</td><td rowspan="1">8549</td></tr></tbody>
 </table>
-<h2>Statefarm Home</h2><h3 id="m0">database.page.TestSqlDataPage#testDataBase</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">excelReader.TestEnterZip#findQoutebyExcel</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">keyword.TestFeatures#testKeyword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Statefarm Home</h2><h3 id="m0">database.page.TestSqlDataPage#testDataBase</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at base.CommonAPI.getTextByXpath(CommonAPI.java:340)
+	at database.page.SqlDataPage.getAgentName(SqlDataPage.java:38)
+	at database.page.TestSqlDataPage.testDataBase(TestSqlDataPage.java:19)
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

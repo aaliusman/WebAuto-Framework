@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Statefarm_Automation_Script">
-              <span class="suite-name border-passed">Statefarm Automation Script</span>
+              <span class="suite-name border-failed">Statefarm Automation Script</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,31 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Statefarm_Automation_Script" class="hide-methods passed suite-Statefarm_Automation_Script"> (hide)</a> <!-- hide-methods passed suite-Statefarm_Automation_Script -->
-                      <a href="#" panel-name="suite-Statefarm_Automation_Script" class="show-methods passed suite-Statefarm_Automation_Script"> (show)</a> <!-- show-methods passed suite-Statefarm_Automation_Script -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Statefarm_Automation_Script" class="hide-methods failed suite-Statefarm_Automation_Script"> (hide)</a> <!-- hide-methods failed suite-Statefarm_Automation_Script -->
+                      <a href="#" panel-name="suite-Statefarm_Automation_Script" class="show-methods failed suite-Statefarm_Automation_Script"> (show)</a> <!-- show-methods failed suite-Statefarm_Automation_Script -->
                     </span>
-                    <div class="method-list-content passed suite-Statefarm_Automation_Script">
+                    <div class="method-list-content failed suite-Statefarm_Automation_Script">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Statefarm_Automation_Script" title="excelReader.TestEnterZip" hash-for-method="findQoutebyExcel">findQoutebyExcel</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Statefarm_Automation_Script" title="database.page.TestSqlDataPage" hash-for-method="testDataBase">testDataBase</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Statefarm_Automation_Script" title="keyword.TestFeatures" hash-for-method="testKeyword">testKeyword</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Statefarm_Automation_Script -->
+                    </div> <!-- method-list-content failed suite-Statefarm_Automation_Script -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -127,24 +117,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Statefarm_Automation_Script" class="panel Statefarm_Automation_Script">
-          <div class="suite-Statefarm_Automation_Script-class-passed">
+          <div class="suite-Statefarm_Automation_Script-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">excelReader.TestEnterZip</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="findQoutebyExcel">
-                  </a> <!-- findQoutebyExcel -->
-                  <span class="method-name">findQoutebyExcel</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Statefarm_Automation_Script-class-passed -->
-          <div class="suite-Statefarm_Automation_Script-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">database.page.TestSqlDataPage</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -153,25 +128,16 @@
                   <a name="testDataBase">
                   </a> <!-- testDataBase -->
                   <span class="method-name">testDataBase</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at base.CommonAPI.getTextByXpath(CommonAPI.java:340)
+	at database.page.SqlDataPage.getAgentName(SqlDataPage.java:38)
+	at database.page.TestSqlDataPage.testDataBase(TestSqlDataPage.java:19)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Statefarm_Automation_Script-class-passed -->
-          <div class="suite-Statefarm_Automation_Script-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">keyword.TestFeatures</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testKeyword">
-                  </a> <!-- testKeyword -->
-                  <span class="method-name">testKeyword</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Statefarm_Automation_Script-class-passed -->
+          </div> <!-- suite-Statefarm_Automation_Script-class-failed -->
         </div> <!-- panel Statefarm_Automation_Script -->
         <div panel-name="test-xml-Statefarm_Automation_Script" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -182,7 +148,7 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Statefarm Automation Script&quot;&gt;
-  &lt;parameter name=&quot;useCloudEnv&quot; value=&quot;true&quot;/&gt;
+  &lt;parameter name=&quot;useCloudEnv&quot; value=&quot;false&quot;/&gt;
   &lt;parameter name=&quot;os&quot; value=&quot;OS X&quot;/&gt;
   &lt;parameter name=&quot;os_version&quot; value=&quot;Sierra&quot;/&gt;
   &lt;parameter name=&quot;browserVersion&quot; value=&quot;53.0&quot;/&gt;
@@ -191,8 +157,6 @@
   &lt;parameter name=&quot;url&quot; value=&quot;https://www.statefarm.com/&quot;/&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Statefarm Home&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;excelReader.TestEnterZip&quot;/&gt;
-      &lt;class name=&quot;keyword.TestFeatures&quot;/&gt;
       &lt;class name=&quot;database.page.TestSqlDataPage&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Statefarm Home --&gt;
@@ -207,7 +171,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Statefarm Home (3 classes)</span>
+                <span class="test-name">Statefarm Home (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -233,24 +197,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'findQoutebyExcel')
-data.setCell(0, 2, 'excelReader.TestEnterZip')
-data.setCell(0, 3, 24856);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testKeyword')
-data.setCell(1, 2, 'keyword.TestFeatures')
-data.setCell(1, 3, 19917);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testDataBase')
-data.setCell(2, 2, 'database.page.TestSqlDataPage')
-data.setCell(2, 3, 10754);
+data.setCell(0, 1, 'testDataBase')
+data.setCell(0, 2, 'database.page.TestSqlDataPage')
+data.setCell(0, 3, 8549);
 window.suiteTableData['Statefarm_Automation_Script']= { tableData: data, tableDiv: 'times-div-Statefarm_Automation_Script'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 55 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-Statefarm_Automation_Script">
               </div> <!-- times-div-Statefarm_Automation_Script -->
             </div> <!-- times-div -->
@@ -265,27 +221,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Statefarm_Automation_Script" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">4 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">database.page.TestSqlDataPage</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">generateReport</span>
-                <br/>
-                <span class="ignored-method-name">extentSetup</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">keyword.TestFeatures</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">generateReport</span>
-                <br/>
-                <span class="ignored-method-name">extentSetup</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Statefarm_Automation_Script" class="panel">
@@ -294,83 +232,36 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">excelReader.TestEnterZip</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">database.page.TestSqlDataPage</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">extentSetup(org.testng.TestRunner@45be7cd5)</span>
+                <span class="method-name">extentSetup(org.testng.TestRunner@4af0df05)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(true, browserstack, OS X, Sierra, firefox, 53.0, https://www.statefarm.com/)</span>
-                <span class="method-start">708 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">startExtent(public void excelReader.TestEnterZip.findQoutebyExcel() throws java.lang.InterruptedException,java.i...)</span>
-                <span class="method-start">9624 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">findQoutebyExcel</span>
-                <span class="method-start">9633 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterEachTestMethod([TestResult name=findQoutebyExcel status=SUCCESS method=TestEnterZip.findQoutebyExcel()[pri:0, insta...)</span>
-                <span class="method-start">34490 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">35040 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">keyword.TestFeatures</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp(true, browserstack, OS X, Sierra, firefox, 53.0, https://www.statefarm.com/)</span>
-                <span class="method-start">35043 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">startExtent(public void keyword.TestFeatures.testKeyword() throws java.io.IOException,java.lang.InterruptedExcep...)</span>
-                <span class="method-start">41858 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testKeyword</span>
-                <span class="method-start">41859 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterEachTestMethod([TestResult name=testKeyword status=SUCCESS method=TestFeatures.testKeyword()[pri:0, instance:keywor...)</span>
-                <span class="method-start">61777 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">61859 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">database.page.TestSqlDataPage</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp(true, browserstack, OS X, Sierra, firefox, 53.0, https://www.statefarm.com/)</span>
-                <span class="method-start">61867 ms</span>
+                <span class="method-name">setUp(false, browserstack, OS X, Sierra, firefox, 53.0, https://www.statefarm.com/)</span>
+                <span class="method-start">362 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">startExtent(public void database.page.TestSqlDataPage.testDataBase() throws java.lang.InterruptedException,java....)</span>
-                <span class="method-start">68608 ms</span>
+                <span class="method-start">15037 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testDataBase</span>
-                <span class="method-start">68609 ms</span>
+                <span class="method-start">15088 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterEachTestMethod([TestResult name=testDataBase status=SUCCESS method=TestSqlDataPage.testDataBase()[pri:0, instance:d...)</span>
-                <span class="method-start">79363 ms</span>
+                <span class="method-name">afterEachTestMethod([TestResult name=testDataBase status=FAILURE method=TestSqlDataPage.testDataBase()[pri:0, instance:d...)</span>
+                <span class="method-start">23660 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">79433 ms</span>
+                <span class="method-start">25947 ms</span>
               </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">excelReader.TestEnterZip</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">generateReport</span>
-                <span class="method-start">79474 ms</span>
+                <span class="method-start">26817 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

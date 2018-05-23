@@ -34,7 +34,7 @@ import java.util.concurrent.TimeUnit;
 
 public class CommonAPI {
 
-    public static WebDriver driver = null;
+    public WebDriver driver = null;
     public String browserstack_username= "muhammadusman25";
     public String browserstack_accesskey = "2Y6vk2WwEqsWsP1wppMJ";
     public String saucelabs_username = "";
@@ -162,7 +162,7 @@ public class CommonAPI {
     @AfterMethod
     public void afterMethod() {
        // driver.close();
-//       driver.quit();
+       driver.quit();
     }
 
     public List<String> getTextList(String locator) {

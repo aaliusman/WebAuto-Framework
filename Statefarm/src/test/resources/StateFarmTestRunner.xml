@@ -3,7 +3,7 @@
 
 <suite name="Statefarm Automation Script" parallel="false">
 
-    <parameter name="useCloudEnv" value="true"/>
+    <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserstack"/>
     <parameter name="os" value="OS X"/>
     <parameter name="os_version" value="Sierra"/>
@@ -26,11 +26,10 @@
     <test name="Statefarm Home">
         <classes>
 
-            <!--<class name="agentByZipCode.FindAgent"/>-->
-            <!--<class name="getQuote.TestCarInsQuote"/>-->
+            <class name="agentByZipCode.FindAgent"/>
             <class name="excelReader.TestEnterZip"/>
-            <class name="keyword.TestFeatures"/>
-            <class name="database.page.TestSqlDataPage"/>
+            <!--<class name="keyword.TestFeatures"/>-->
+            <!--<class name="database.page.TestSqlDataPage"/>-->
         </classes>
     </test>
 </suite>

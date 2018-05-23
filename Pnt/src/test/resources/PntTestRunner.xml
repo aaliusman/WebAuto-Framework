@@ -26,7 +26,7 @@
     <test name="PNT Forum">
         <classes>
 
-            <!--<class name="pntForum.TestAuthentication"/>-->
+            <class name="pntForum.TestAuthentication"/>
             <!--<class name="testSearchItem.TestSearhField"/>-->
             <class name="pntForum.TestKeyword"/>
         </classes>

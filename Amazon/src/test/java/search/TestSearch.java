@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class TestSearch extends CommonAPI{
 
-    //@Test
+    @Test
     public void searchSeleniumBook(){
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Selenium Book", Keys.ENTER);
     }

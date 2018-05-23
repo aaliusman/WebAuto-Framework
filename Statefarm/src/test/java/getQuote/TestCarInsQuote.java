@@ -5,12 +5,12 @@ import org.testng.annotations.Test;
 import getQuote.AddVehicle;
 public class TestCarInsQuote extends AddVehicle{
 
-//    @Test
-    public void getCarInsuranceQuote() throws InterruptedException {
+//      @Test
+//    public void getCarInsuranceQuote() throws InterruptedException {
 //        carQuote(driver);
-    }
+//    }
 
-    @Test
+//    @Test
     public void getCarInsQuote() throws InterruptedException {
 
         vehicleInfo();
