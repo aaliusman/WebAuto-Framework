@@ -37,14 +37,15 @@ public class EnterZipCode extends CommonAPI {
     public void searchFor(String value){
         ZipCode().sendKeys(value);
     }
+
     public void submitSearchButton(){
         clickQuoteButton().click();
     }
     public void clearInput(){
         ZipCode().clear();
     }
-    public void navigateBack(WebDriver driver1){ driver1.navigate().back();}
 
+    public void navigateBack(WebDriver driver1){ driver1.navigate().back();}
 
     public void searchItemsAndSubmitButton(WebDriver driver1) throws IOException, InterruptedException {
         ZipToBeEntered itemsToBeSearched = new ZipToBeEntered();

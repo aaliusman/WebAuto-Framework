@@ -10,17 +10,17 @@
   <parameter name="url" value="https://www.statefarm.com/"/>
   <test thread-count="5" name="Statefarm Home(failed)">
     <classes>
-      <class name="database.page.TestSqlDataPage">
+      <class name="excelReader.TestEnterZip">
         <methods>
           <include name="afterEachTestMethod"/>
           <include name="generateReport"/>
+          <include name="findQoutebyExcel"/>
           <include name="extentSetup"/>
           <include name="setUp"/>
           <include name="afterMethod"/>
-          <include name="testDataBase"/>
           <include name="startExtent"/>
         </methods>
-      </class> <!-- database.page.TestSqlDataPage -->
+      </class> <!-- excelReader.TestEnterZip -->
     </classes>
   </test> <!-- Statefarm Home(failed) -->
 </suite> <!-- Failed suite [Statefarm Automation Script] -->
