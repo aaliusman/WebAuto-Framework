@@ -26,7 +26,7 @@
     <test name="W3Schools Home">
         <classes>
 
-          <class name="testCellData.TestReadData"/>
+          <!--<class name="testCellData.TestReadData"/>-->
         </classes>
     </test>
 </suite>
