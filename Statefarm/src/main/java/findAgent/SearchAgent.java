@@ -47,7 +47,6 @@ public class SearchAgent extends CommonAPI{
 
     }
 
-
     public void findAutoInsuAgent(){
         searchAgent();
         zipcode();

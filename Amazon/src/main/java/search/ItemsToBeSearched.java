@@ -2,7 +2,6 @@ package search;
 
 import base.CommonAPI;
 import utility.DataReader;
-
 import java.io.IOException;
 
 public class ItemsToBeSearched extends CommonAPI {
