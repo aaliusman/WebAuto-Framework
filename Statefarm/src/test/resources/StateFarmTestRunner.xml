@@ -27,7 +27,7 @@
         <classes>
 
             <class name="agentByZipCode.FindAgent"/>
-            <class name="excelReader.TestEnterZip"/>
+            <!--<class name="excelReader.TestEnterZip"/>-->
             <!--<class name="keyword.TestFeatures"/>-->
             <!--<class name="database.page.TestSqlDataPage"/>-->
         </classes>

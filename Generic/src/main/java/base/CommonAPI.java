@@ -35,18 +35,20 @@ import java.util.concurrent.TimeUnit;
 public class CommonAPI {
 
     public WebDriver driver = null;
-    public String browserstack_username= "muhammadusman25";
+    public String browserstack_username = "muhammadusman25";
     public String browserstack_accesskey = "2Y6vk2WwEqsWsP1wppMJ";
     public String saucelabs_username = "";
     public String saucelabs_accesskey = "";
 
     //ExtentReport
     public static ExtentReports extent;
+
     @BeforeSuite
     public void extentSetup(ITestContext context) {
         ExtentManager.setOutputDirectory(context);
         extent = ExtentManager.getInstance();
     }
+
     @BeforeMethod
     public void startExtent(Method method) {
         String className = method.getDeclaringClass().getSimpleName();
@@ -54,12 +56,14 @@ public class CommonAPI {
         ExtentTestManager.startTest(method.getName());
         ExtentTestManager.getTest().assignCategory(className);
     }
+
     protected String getStackTrace(Throwable t) {
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);
         t.printStackTrace(pw);
         return sw.toString();
     }
+
     @AfterMethod
     public void afterEachTestMethod(ITestResult result) {
         ExtentTestManager.getTest().getTest().setStartedTime(getTime(result.getStartMillis()));
@@ -83,10 +87,12 @@ public class CommonAPI {
         }
 //        driver.quit();
     }
+
     @AfterSuite
     public void generateReport() {
         extent.close();
     }
+
     private Date getTime(long millis) {
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(millis);
@@ -94,19 +100,19 @@ public class CommonAPI {
     }
 
 
-    @Parameters({ "useCloudEnv", "cloudEnvName", "os", "os_version", "browserName","browserVersion","url"})
+    @Parameters({"useCloudEnv", "cloudEnvName", "os", "os_version", "browserName", "browserVersion", "url"})
     @BeforeMethod
-    public void setUp(@Optional("false") boolean useCloudEnv, @Optional("false")String cloudEnvName,
-                      @Optional("OS X") String os,@Optional("10") String os_version, @Optional("firefox") String browserName, @Optional("34")
-                                  String browserVersion, @Optional("http://www.amazon.com") String url) throws IOException {
+    public void setUp(@Optional("false") boolean useCloudEnv, @Optional("false") String cloudEnvName,
+                      @Optional("OS X") String os, @Optional("10") String os_version, @Optional("firefox") String browserName, @Optional("34")
+                              String browserVersion, @Optional("http://www.amazon.com") String url) throws IOException {
         System.setProperty("webdriver.chrome.driver", "/Users/bravo1516/Web-Automation-Framework/WebAuto-Framework/Generic/browser-driver/chromedriver");
-        if(useCloudEnv==true){
-            if(cloudEnvName.equalsIgnoreCase("browserstack")) {
-              getCloudDriver(cloudEnvName,browserstack_username,browserstack_accesskey,os,os_version, browserName, browserVersion);
-            }else if (cloudEnvName.equalsIgnoreCase("saucelabs")){
-             getCloudDriver(cloudEnvName,saucelabs_username, saucelabs_accesskey,os,os_version, browserName, browserVersion);
+        if (useCloudEnv == true) {
+            if (cloudEnvName.equalsIgnoreCase("browserstack")) {
+                getCloudDriver(cloudEnvName, browserstack_username, browserstack_accesskey, os, os_version, browserName, browserVersion);
+            } else if (cloudEnvName.equalsIgnoreCase("saucelabs")) {
+                getCloudDriver(cloudEnvName, saucelabs_username, saucelabs_accesskey, os, os_version, browserName, browserVersion);
             }
-        }else{
+        } else {
             getLocalDriver(os, browserName);
         }
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -115,23 +121,23 @@ public class CommonAPI {
         driver.manage().window().maximize();
     }
 
-    public WebDriver getLocalDriver(@Optional("mac") String OS, String browserName){
-        if(browserName.equalsIgnoreCase("chrome")){
-            if(OS.equalsIgnoreCase("OS X")){
+    public WebDriver getLocalDriver(@Optional("mac") String OS, String browserName) {
+        if (browserName.equalsIgnoreCase("chrome")) {
+            if (OS.equalsIgnoreCase("OS X")) {
                 System.setProperty("webdriver.chrome.driver", "../Generic/browser-driver/chromedriver");
-            }else if(OS.equalsIgnoreCase("Windows")){
+            } else if (OS.equalsIgnoreCase("Windows")) {
                 System.setProperty("webdriver.chrome.driver", "../Generic/browser-driver/chromedriver.exe");
             }
             driver = new ChromeDriver();
-        }else if(browserName.equalsIgnoreCase("firefox")){
-            if(OS.equalsIgnoreCase("OS X")){
+        } else if (browserName.equalsIgnoreCase("firefox")) {
+            if (OS.equalsIgnoreCase("OS X")) {
                 System.setProperty("webdriver.gecko.driver", "../Generic/browser-driver/geckodriver");
-            }else if(OS.equalsIgnoreCase("Windows")) {
+            } else if (OS.equalsIgnoreCase("Windows")) {
                 System.setProperty("webdriver.gecko.driver", "../Generic/browser-driver/geckodriver.exe");
             }
             driver = new FirefoxDriver();
 
-        } else if(browserName.equalsIgnoreCase("ie")) {
+        } else if (browserName.equalsIgnoreCase("ie")) {
             System.setProperty("webdriver.ie.driver", "../Generic/browser-driver/IEDriverServer.exe");
             driver = new InternetExplorerDriver();
         }
@@ -139,19 +145,19 @@ public class CommonAPI {
 
     }
 
-    public WebDriver getCloudDriver(String envName,String envUsername, String envAccessKey,String os, String os_version,String browserName,
-                                    String browserVersion)throws IOException {
+    public WebDriver getCloudDriver(String envName, String envUsername, String envAccessKey, String os, String os_version, String browserName,
+                                    String browserVersion) throws IOException {
 
         DesiredCapabilities cap = new DesiredCapabilities();
-        cap.setCapability("browser",browserName);
-        cap.setCapability("browser_version",browserVersion);
+        cap.setCapability("browser", browserName);
+        cap.setCapability("browser_version", browserVersion);
         cap.setCapability("os", os);
         cap.setCapability("os_version", os_version);
-        if(envName.equalsIgnoreCase("Saucelabs")){
+        if (envName.equalsIgnoreCase("Saucelabs")) {
             //resolution for Saucelabs
-            driver = new RemoteWebDriver(new URL("http://"+envUsername+":"+envAccessKey+
+            driver = new RemoteWebDriver(new URL("http://" + envUsername + ":" + envAccessKey +
                     "@ondemand.saucelabs.com:80/wd/hub"), cap);
-        }else if(envName.equalsIgnoreCase("Browserstack")) {
+        } else if (envName.equalsIgnoreCase("Browserstack")) {
             cap.setCapability("resolution", "1024x768");
             driver = new RemoteWebDriver(new URL("http://" + envUsername + ":" + envAccessKey +
                     "@hub-cloud.browserstack.com/wd/hub"), cap);
@@ -161,8 +167,8 @@ public class CommonAPI {
 
     @AfterMethod
     public void afterMethod() {
-       // driver.close();
-       driver.quit();
+        // driver.close();
+        driver.quit();
     }
 
     public List<String> getTextList(String locator) {
@@ -175,7 +181,8 @@ public class CommonAPI {
         return textList;
 
     }
-    public void enterTextById(String locator, String value){
+
+    public void enterTextById(String locator, String value) {
         driver.findElement(By.id(locator)).sendKeys(value);
     }
 
@@ -185,9 +192,10 @@ public class CommonAPI {
 
     public void clickWebElement(String locator) {
 
-        driver.findElement(By.id(locator)).click();}
+        driver.findElement(By.id(locator)).click();
+    }
 
-        public  void clearWebElement(String locator){
+    public void clearWebElement(String locator) {
         driver.findElement(By.id(locator)).clear();
     }
 
@@ -444,6 +452,11 @@ public class CommonAPI {
         }
     }
 
+    //open blank tab by using javascript
+    public void openBlankTab() {
+        ((JavascriptExecutor) driver).executeScript("window.open('','_blank');");
+    }
+
     //Taking Screen shots
     public void takeScreenShot() throws IOException {
         File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -489,13 +502,13 @@ public class CommonAPI {
     }
 
     //Handling New Tabs
-   public static WebDriver handleNewTab(WebDriver driver1){
+    public static WebDriver handleNewTab(WebDriver driver1) {
         String oldTab = driver1.getWindowHandle();
         List<String> newTabs = new LinkedList<String>(driver1.getWindowHandles());
         //newTabs.remove(oldTab);
         driver1.switchTo().window(newTabs.get(1));
         return driver1;
-   }
+    }
 
     public List<String> getTextLists(WebDriver driver, String locator) {
         List<WebElement> elementList = new ArrayList<WebElement>();
@@ -508,29 +521,41 @@ public class CommonAPI {
 
     }
 
-    public String getTitle(WebDriver driver1){
-       String title = driver1.getTitle();
+    public String getTitle(WebDriver driver1) {
+        String title = driver1.getTitle();
         System.out.println(title);
         return title;
     }
 
-    public static boolean isPopUpWindowDisplayed(WebDriver driver1, String locator){
+    public static boolean isPopUpWindowDisplayed(WebDriver driver1, String locator) {
         boolean value = driver1.findElement(By.cssSelector(locator)).isDisplayed();
         return value;
     }
 
-    public boolean isPopupWindowDisplayed(String locator){
-        boolean value =  driver.findElement(By.xpath(locator)).isDisplayed();
+    public boolean isPopupWindowDisplayed(String locator) {
+        boolean value = driver.findElement(By.xpath(locator)).isDisplayed();
         return value;
     }
 
-    public void selectByIndex(String locator, int index){
-        Select select= new Select(driver.findElement(By.id(locator)));
+    public void selectByIndex(String locator, int index) {
+        Select select = new Select(driver.findElement(By.id(locator)));
         select.selectByIndex(index);
     }
 
-    public void clickById(WebDriver driver1, String locator){
+    public void clickById(WebDriver driver1, String locator) {
         driver1.findElement(By.id(locator)).click();
     }
 
+    public WebDriver handleWindow(WebDriver driver, String parent) {
+
+        Set<String> allWindow = driver.getWindowHandles();
+        for (String child : allWindow) {
+            if (!parent.equalsIgnoreCase(child)) {
+                driver.switchTo().window(child);
+            }
+        }
+        return driver;
     }
+
+
+}

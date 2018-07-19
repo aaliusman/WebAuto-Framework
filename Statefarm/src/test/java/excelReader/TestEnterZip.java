@@ -9,14 +9,14 @@ import java.io.IOException;
 
 public class TestEnterZip extends EnterZipCode {
 
-//    @Test
+    @Test
     public void enterZipByList() throws InterruptedException {
         EnterZipCode listzip = PageFactory.initElements(driver, EnterZipCode.class);
         listzip.enterZip(driver);
     }
 
 
-    @Test
+//    @Test
     public void findQoutebyExcel() throws InterruptedException, IOException {
         EnterZipCode enterZipCode = PageFactory.initElements(driver, EnterZipCode.class);
         enterZipCode.searchItemsAndSubmitButton(driver);

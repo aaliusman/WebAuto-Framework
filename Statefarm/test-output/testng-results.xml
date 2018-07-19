@@ -1,93 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="4" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
     <line>
       <![CDATA[Extent Report Directory/Users/bravo1516/Web-Automation-Framework/WebAuto-Framework/Statefarm/test-output/html]]>
     </line>
   </reporter-output>
-  <suite name="Statefarm Automation Script" duration-ms="73896" started-at="2018-06-02T14:13:02Z" finished-at="2018-06-02T14:14:16Z">
+  <suite name="Statefarm Automation Script" duration-ms="24243" started-at="2018-06-22T14:42:01Z" finished-at="2018-06-22T14:42:25Z">
     <groups>
     </groups>
-    <test name="Statefarm Home" duration-ms="73896" started-at="2018-06-02T14:13:02Z" finished-at="2018-06-02T14:14:16Z">
-      <class name="excelReader.TestEnterZip">
-        <test-method status="PASS" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:excelReader.TestEnterZip@2a17b7b6]" name="setUp" is-config="true" duration-ms="15913" started-at="2018-06-02T14:13:25Z" finished-at="2018-06-02T14:13:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[browserstack]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[OS X]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Sierra]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[53.0]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[https://www.statefarm.com/]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:excelReader.TestEnterZip@2a17b7b6]" name="startExtent" is-config="true" duration-ms="1" started-at="2018-06-02T14:13:41Z" finished-at="2018-06-02T14:13:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void excelReader.TestEnterZip.findQoutebyExcel() throws java.lang.InterruptedException,java.io.IOException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startExtent -->
-        <test-method status="PASS" signature="findQoutebyExcel()[pri:0, instance:excelReader.TestEnterZip@2a17b7b6]" name="findQoutebyExcel" duration-ms="33306" started-at="2018-06-02T14:13:41Z" finished-at="2018-06-02T14:14:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- findQoutebyExcel -->
-        <test-method status="PASS" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:excelReader.TestEnterZip@2a17b7b6]" name="afterEachTestMethod" is-config="true" duration-ms="151" started-at="2018-06-02T14:14:14Z" finished-at="2018-06-02T14:14:14Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=findQoutebyExcel status=SUCCESS method=TestEnterZip.findQoutebyExcel()[pri:0, instance:excelReader.TestEnterZip@2a17b7b6] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterEachTestMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:excelReader.TestEnterZip@2a17b7b6]" name="afterMethod" is-config="true" duration-ms="1847" started-at="2018-06-02T14:14:14Z" finished-at="2018-06-02T14:14:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- excelReader.TestEnterZip -->
+    <test name="Statefarm Home" duration-ms="24243" started-at="2018-06-22T14:42:01Z" finished-at="2018-06-22T14:42:25Z">
       <class name="agentByZipCode.FindAgent">
-        <test-method status="PASS" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:agentByZipCode.FindAgent@5d76b067]" name="extentSetup" is-config="true" duration-ms="392" started-at="2018-06-02T14:13:02Z" finished-at="2018-06-02T14:13:02Z">
+        <test-method status="PASS" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:agentByZipCode.FindAgent@67205a84]" name="extentSetup" is-config="true" duration-ms="309" started-at="2018-06-22T14:42:00Z" finished-at="2018-06-22T14:42:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6c8bca63]]>
+                <![CDATA[org.testng.TestRunner@736caf7a]]>
               </value>
             </param>
           </params>
@@ -97,7 +24,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- extentSetup -->
-        <test-method status="PASS" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:agentByZipCode.FindAgent@5d76b067]" name="setUp" is-config="true" duration-ms="12365" started-at="2018-06-02T14:13:02Z" finished-at="2018-06-02T14:13:15Z">
+        <test-method status="PASS" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:agentByZipCode.FindAgent@67205a84]" name="setUp" is-config="true" duration-ms="13875" started-at="2018-06-22T14:42:01Z" finished-at="2018-06-22T14:42:15Z">
           <params>
             <param index="0">
               <value>
@@ -138,7 +65,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:agentByZipCode.FindAgent@5d76b067]" name="startExtent" is-config="true" duration-ms="20" started-at="2018-06-02T14:13:15Z" finished-at="2018-06-02T14:13:15Z">
+        <test-method status="PASS" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:agentByZipCode.FindAgent@67205a84]" name="startExtent" is-config="true" duration-ms="14" started-at="2018-06-22T14:42:15Z" finished-at="2018-06-22T14:42:15Z">
           <params>
             <param index="0">
               <value>
@@ -149,26 +76,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExtent -->
-        <test-method status="PASS" signature="printAgentName()[pri:0, instance:agentByZipCode.FindAgent@5d76b067]" name="printAgentName" duration-ms="8523" started-at="2018-06-02T14:13:15Z" finished-at="2018-06-02T14:13:23Z">
+        <test-method status="PASS" signature="printAgentName()[pri:0, instance:agentByZipCode.FindAgent@67205a84]" name="printAgentName" duration-ms="8488" started-at="2018-06-22T14:42:15Z" finished-at="2018-06-22T14:42:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- printAgentName -->
-        <test-method status="PASS" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:agentByZipCode.FindAgent@5d76b067]" name="afterEachTestMethod" is-config="true" duration-ms="800" started-at="2018-06-02T14:13:23Z" finished-at="2018-06-02T14:13:24Z">
+        <test-method status="PASS" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:agentByZipCode.FindAgent@67205a84]" name="afterEachTestMethod" is-config="true" duration-ms="1354" started-at="2018-06-22T14:42:23Z" finished-at="2018-06-22T14:42:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=printAgentName status=SUCCESS method=FindAgent.printAgentName()[pri:0, instance:agentByZipCode.FindAgent@5d76b067] output={null}]]]>
+                <![CDATA[[TestResult name=printAgentName status=SUCCESS method=FindAgent.printAgentName()[pri:0, instance:agentByZipCode.FindAgent@67205a84] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:agentByZipCode.FindAgent@5d76b067]" name="afterMethod" is-config="true" duration-ms="935" started-at="2018-06-02T14:13:24Z" finished-at="2018-06-02T14:13:25Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:agentByZipCode.FindAgent@67205a84]" name="afterMethod" is-config="true" duration-ms="493" started-at="2018-06-22T14:42:24Z" finished-at="2018-06-22T14:42:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="generateReport()[pri:0, instance:agentByZipCode.FindAgent@5d76b067]" name="generateReport" is-config="true" duration-ms="69" started-at="2018-06-02T14:14:16Z" finished-at="2018-06-02T14:14:17Z">
+        <test-method status="PASS" signature="generateReport()[pri:0, instance:agentByZipCode.FindAgent@67205a84]" name="generateReport" is-config="true" duration-ms="73" started-at="2018-06-22T14:42:25Z" finished-at="2018-06-22T14:42:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->

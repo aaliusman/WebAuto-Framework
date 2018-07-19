@@ -11,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 public class EnterZipCode extends CommonAPI {
 
@@ -59,20 +60,37 @@ public class EnterZipCode extends CommonAPI {
         }
     }
 
+    public WebDriver handleWindow(WebDriver driver1){
+
+        String parent = driver1.getWindowHandle();
+        Set<String> allWindow = driver1.getWindowHandles();
+        if(allWindow.size()>1){
+        for(String child : allWindow){
+            if(!parent.equalsIgnoreCase(child)){
+                driver1.switchTo().window(child);
+                driver1.close();
+                driver1.switchTo().window(parent);
+            }
+        }}return driver1;
+    }
+
     public void handlePopUp(WebDriver driver1) {
         String homePage = driver1.getWindowHandle();
         System.out.println(homePage);
     }
 
     public void enterZip(WebDriver driver1) throws InterruptedException {
+
+
         List<String> zipCode = zip();
         for (String st : zipCode) {
             enterZipCode.sendKeys(st);
             clickGetQuote.click();
-            Thread.sleep(3400);
+
 //            HandlPopUP handlPopUP = PageFactory.initElements(driver1, HandlPopUP.class);
 //            handlPopUP.handlePopUpWindow(driver1);
            driver1.navigate().back();
+           handleWindow(driver1);
 
         }
     }

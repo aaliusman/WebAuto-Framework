@@ -3,7 +3,7 @@
 
 <suite name="Aamazon Automation Script" parallel="false">
 
-    <parameter name="useCloudEnv" value="true"/>
+    <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserstack"/>
     <parameter name="os" value="OS X"/>
     <parameter name="os_version" value="Sierra"/>
@@ -26,9 +26,9 @@
     <test name="Amazon Home">
         <classes>
             <class name="search.TestLandingPage"/>
-            <class name="dropDownMenu.TestDropMenu"/>
-            <class name="search.TestSearch"/>
-            <class name="google.sheet.page.TestGoogleSheetPage"/>
+            <!--<class name="dropDownMenu.TestDropMenu"/>-->
+            <!--<class name="search.TestSearch"/>-->
+            <!--<class name="google.sheet.page.TestGoogleSheetPage"/>-->
         </classes>
     </test>
 </suite>

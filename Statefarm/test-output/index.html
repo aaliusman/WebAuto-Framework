@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,11 +100,6 @@
                       <a href="#" panel-name="suite-Statefarm_Automation_Script" class="show-methods passed suite-Statefarm_Automation_Script"> (show)</a> <!-- show-methods passed suite-Statefarm_Automation_Script -->
                     </span>
                     <div class="method-list-content passed suite-Statefarm_Automation_Script">
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Statefarm_Automation_Script" title="excelReader.TestEnterZip" hash-for-method="findQoutebyExcel">findQoutebyExcel</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Statefarm_Automation_Script" title="agentByZipCode.FindAgent" hash-for-method="printAgentName">printAgentName</a> <!-- method navigator-link -->
@@ -122,21 +117,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Statefarm_Automation_Script" class="panel Statefarm_Automation_Script">
-          <div class="suite-Statefarm_Automation_Script-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">excelReader.TestEnterZip</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="findQoutebyExcel">
-                  </a> <!-- findQoutebyExcel -->
-                  <span class="method-name">findQoutebyExcel</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Statefarm_Automation_Script-class-passed -->
           <div class="suite-Statefarm_Automation_Script-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -172,7 +152,6 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;Statefarm Home&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;agentByZipCode.FindAgent&quot;/&gt;
-      &lt;class name=&quot;excelReader.TestEnterZip&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Statefarm Home --&gt;
 &lt;/suite&gt; &lt;!-- Statefarm Automation Script --&gt;
@@ -186,7 +165,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Statefarm Home (2 classes)</span>
+                <span class="test-name">Statefarm Home (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -212,20 +191,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'findQoutebyExcel')
-data.setCell(0, 2, 'excelReader.TestEnterZip')
-data.setCell(0, 3, 33306);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'printAgentName')
-data.setCell(1, 2, 'agentByZipCode.FindAgent')
-data.setCell(1, 3, 8523);
+data.setCell(0, 1, 'printAgentName')
+data.setCell(0, 2, 'agentByZipCode.FindAgent')
+data.setCell(0, 3, 8488);
 window.suiteTableData['Statefarm_Automation_Script']= { tableData: data, tableDiv: 'times-div-Statefarm_Automation_Script'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 41 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-Statefarm_Automation_Script">
               </div> <!-- times-div-Statefarm_Automation_Script -->
             </div> <!-- times-div -->
@@ -240,18 +215,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Statefarm_Automation_Script" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">excelReader.TestEnterZip</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">generateReport</span>
-                <br/>
-                <span class="ignored-method-name">extentSetup</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Statefarm_Automation_Script" class="panel">
@@ -262,58 +228,32 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">agentByZipCode.FindAgent</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">extentSetup(org.testng.TestRunner@6c8bca63)</span>
+                <span class="method-name">extentSetup(org.testng.TestRunner@736caf7a)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(false, browserstack, OS X, Sierra, firefox, 53.0, https://www.statefarm.com/)</span>
-                <span class="method-start">420 ms</span>
+                <span class="method-start">324 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">startExtent(public void agentByZipCode.FindAgent.printAgentName())</span>
-                <span class="method-start">12786 ms</span>
+                <span class="method-start">14200 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">printAgentName</span>
-                <span class="method-start">12806 ms</span>
+                <span class="method-start">14215 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEachTestMethod([TestResult name=printAgentName status=SUCCESS method=FindAgent.printAgentName()[pri:0, instance:age...)</span>
-                <span class="method-start">21330 ms</span>
+                <span class="method-start">22704 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">22130 ms</span>
+                <span class="method-start">24058 ms</span>
               </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">excelReader.TestEnterZip</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp(false, browserstack, OS X, Sierra, firefox, 53.0, https://www.statefarm.com/)</span>
-                <span class="method-start">23067 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">startExtent(public void excelReader.TestEnterZip.findQoutebyExcel() throws java.lang.InterruptedException,java.i...)</span>
-                <span class="method-start">38981 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">findQoutebyExcel</span>
-                <span class="method-start">38982 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterEachTestMethod([TestResult name=findQoutebyExcel status=SUCCESS method=TestEnterZip.findQoutebyExcel()[pri:0, insta...)</span>
-                <span class="method-start">72289 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">72440 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">agentByZipCode.FindAgent</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">generateReport</span>
-                <span class="method-start">74446 ms</span>
+                <span class="method-start">24577 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

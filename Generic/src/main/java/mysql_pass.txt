@@ -1,0 +1,110 @@
+2018-03-20T23:50:09.131441Z 1 [Note] A temporary password is generated for root@localhost:
+
+Muhammads-MacBook-Air:~ bravo1516$ mysql -u root -p
+
+Enter password: 
+
+//to change password
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY ‘zayan8520’;
+Query OK, 0 rows affected (0.00 sec)
+
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.00 sec)
+
+mysql> use mysql;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++---------------------------+
+| Tables_in_mysql           |
++---------------------------+
+| columns_priv              |
+| db                        |
+| engine_cost               |
+| event                     |
+| func                      |
+| general_log               |
+| gtid_executed             |
+| help_category             |
+| help_keyword              |
+| help_relation             |
+| help_topic                |
+| innodb_index_stats        |
+| innodb_table_stats        |
+| ndb_binlog_index          |
+| plugin                    |
+| proc                      |
+| procs_priv                |
+| proxies_priv              |
+| server_cost               |
+| servers                   |
+| slave_master_info         |
+| slave_relay_log_info      |
+| slave_worker_info         |
+| slow_log                  |
+| tables_priv               |
+| time_zone                 |
+| time_zone_leap_second     |
+| time_zone_name            |
+| time_zone_transition      |
+| time_zone_transition_type |
+| user                      |
++---------------------------+
+31 rows in set (0.00 sec)
+
+mysql> create database sample_db;
+
+Use sample_db;
+Create table employees (
+	id INTEGER,
+	first_name varchar(255),
+	last_name varchar(255),
+	salary integer
+    )
+
+Drop table sample_db     to delete table permanently
+
+Insert into employees values(5, 'John', 'Treschotic', 340000)
+Insert into employees (id, first_name, salary)  values (8, 'Corey', 88880)
+
+Alter table employees
+ADD city varchar(20)
+
+delete from employees
+where last_name = 'Usman';
+
+select distinct*
+from employees
+where salary >= 400000
+ORDER BY first_name;
+
+update employees
+set id=1, city='Philadelphia'
+where last_name = 'Usman'
+
+
+select distinct*
+from employees
+where salary >= 90000
+order by salary DESC;
+
+
+
+mysql> exit;
+\q
+ZZ
+Q'.
+Clear
+Exit;
+

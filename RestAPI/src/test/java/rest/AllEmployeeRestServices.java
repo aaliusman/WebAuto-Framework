@@ -1,6 +1,7 @@
 package rest;
 
 import io.restassured.response.Response;
+import org.apache.poi.util.SystemOutLogger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import io.restassured.response.*;
@@ -13,7 +14,9 @@ public class AllEmployeeRestServices {
     public void callAllEmployeeResources() {
         Response response = given().when().get("http://info.venturepulse.org:8080/service-webapp/api/AllEmployeeResources").then().statusCode(200).extract().response();
         String statusLine = response.getStatusLine();
+            System.out.println("Status line: "+statusLine);
         int statusCode = response.getStatusCode();
+            System.out.println(statusCode);
         String body = response.getBody().prettyPrint();
         Assert.assertEquals(statusLine, "HTTP/1.1 200 OK");
         Assert.assertEquals(statusCode, 200);
